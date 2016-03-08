@@ -30,14 +30,9 @@ body.landing {
      position: relative;
      display: table;
      width: 100%;
- }
- 
- .point {
-     display: table-cell;
-     position: relative;
-     padding: 2rem;
-     width: 33.3%;
-     text-align: center;
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
  }
  
  .point .point-title {
