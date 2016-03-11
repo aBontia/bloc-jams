@@ -38,8 +38,3 @@ body.collection {
  .collection-album-container img {
      width: 80%;
  }
-.links-container:active {
-background:#ffffff;
-      color:rgb(233,50,117);  
-        
-}
