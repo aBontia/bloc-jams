@@ -93,3 +93,8 @@ body {
  @media (min-width: 1024px) {
   html { font-size: 120%; }
  }
+.links-container:active {
+background:#ffffff;
+      color:rgb(233,50,117);  
+        
+}
