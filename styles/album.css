@@ -5,7 +5,10 @@ body.album {
      background-position: center center;
      background-size: cover;
  }
- 
+thead {
+     background-color:#6B2394;   
+        
+}
  .album-cover-art {
      position: relative;
      left: 20%;
@@ -26,7 +29,7 @@ body.album {
  
  .album-view-details .album-view-artist {
      font-weight: 300;
-     font-size: 1.5rem;
+     font-size: 1.35rem;
  }
  
  .album-view-details .album-view-release-info {
@@ -47,19 +50,24 @@ body.album {
  }
  
  .song-item-number {
-     width: 5%;
+     width: 7%;
+         text-align:center;
  }
  
  .song-item-title {
-     width: 85%;
+     width: 75%;
  }
  
  .song-item-duration {
-     width: 10%;
+     width: 6%;
  }
  .song-item-timesplayed {
-     width: 5%;
- }
+     width: 17%;
+     text-align:center;
+}
+tr:nth-child(even) {
+  background-color:#8F6EA5;
+}
  @media (max-width: 640px) and (min-width: 320px) {
      .album-view-details {
          text-align: center;
