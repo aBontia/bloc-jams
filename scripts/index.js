@@ -49,6 +49,7 @@ var multiply = function(x, y) {
 };
 
 multiply (10, 10)
+<<<<<<< HEAD
 
 //Chapter 14 Assignment:--------------------------------------------------------
 var favoriteNumber = function(fav, guess){
@@ -90,3 +91,5 @@ var canIGet = function(item, money) {
 }; 
 
 //Chapter 15 Assignment:--------------------------------------------------------
+=======
+>>>>>>> Ch-13Assn
