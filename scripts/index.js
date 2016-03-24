@@ -50,6 +50,9 @@ var multiply = function(x, y) {
 
 multiply (10, 10)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 785049324b02695159e3f2a60e49fa180a208012
 
 //Chapter 14 Assignment:--------------------------------------------------------
 var favoriteNumber = function(fav, guess){
@@ -90,6 +93,9 @@ var canIGet = function(item, money) {
     {return false;}
 }; 
 
+<<<<<<< HEAD
 //Chapter 15 Assignment:--------------------------------------------------------
 =======
 >>>>>>> Ch-13Assn
+=======
+>>>>>>> 785049324b02695159e3f2a60e49fa180a208012
