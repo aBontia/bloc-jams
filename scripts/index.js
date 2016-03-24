@@ -22,3 +22,30 @@ console.log(myName === "Alex");
 console.log(myName === "Alex" &&  courseTrack === "javascript");
 console.log(courseType && "Alex");
 console.log(5 === "5");
+
+var monkey = "monkey";
+var pluralizedMonkey = monkey + "s"; // stores "monkeys"
+
+var orange = "orange";
+var pluralizedOrange = orange + "s"; // stores "oranges"
+
+
+function pluralize(word) {
+    return word + "s"; // makes the pluralized word available after it's called
+}
+pluralize; // returns the function definition
+pluralize("orange");
+
+//Chapter 13 Assignment:--------------------------------------------------------
+function helloWorld() {
+   return "Hello World!";
+}
+
+helloWorld();
+
+
+var multiply = function(x, y) {
+    return x * y;
+};
+
+multiply (10, 10)
