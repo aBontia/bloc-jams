@@ -49,10 +49,6 @@ var multiply = function(x, y) {
 };
 
 multiply (10, 10)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 785049324b02695159e3f2a60e49fa180a208012
 
 //Chapter 14 Assignment:--------------------------------------------------------
 var favoriteNumber = function(fav, guess){
@@ -93,9 +89,32 @@ var canIGet = function(item, money) {
     {return false;}
 }; 
 
-<<<<<<< HEAD
 //Chapter 15 Assignment:--------------------------------------------------------
-=======
->>>>>>> Ch-13Assn
-=======
->>>>>>> 785049324b02695159e3f2a60e49fa180a208012
+var dictionary = {
+    aardvark: "a nocturnal burrowing mammal that feeds on ants and termites",
+    badger: "a heavily built omnivorous nocturnal mammal of the weasel family",
+    crocodile: "a large predatory semiaquatic reptile with horny textured skin"
+};
+
+// create an object named `student`
+var student = {};
+
+// add a property to `student` using dot syntax
+student.name = "John Doe";
+
+// or add a property using bracket syntax
+student["name"] = "John Doe";
+
+// `student` now has one property:
+// student = {
+//    name: "John Doe"
+// };
+
+// add another property to `student`
+student.grade = "A+";
+
+// `student` now has two properties:
+// student = {
+//     name: "John Doe",
+//     grade: "A+"
+// };
