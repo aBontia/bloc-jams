@@ -1,6 +1,7 @@
 body.landing {
      background-color: rgb(58,23,63);
  }
+
  .point {
      position: relative;
      padding: 2rem;
@@ -16,6 +17,7 @@ body.landing {
      -moz-transition-delay: 0.2s;
      transition-delay: 0.2s;
  }
+
  .hero-content {
      position: relative;
      min-height: 600px;
