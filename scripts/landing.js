@@ -15,5 +15,7 @@
                animatePoints();
 
  window.onload = function() {
-     alert("The window has loaded!");
+     window.addEventListener('scroll', function(event) {
+         console.log(event);
+     });
  }
