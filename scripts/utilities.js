@@ -1,10 +1,5 @@
-function forEach(text, callback) {
-    console.log(text);
-    callback();
+function forEach(array, callback) {
+    for (var i = 0; i < array.length; i++) {
+            callback(array[i]);
+    }
 }
-
-function myCallback() {
-    console.log("world!");
-}
-
-myFunction("Hello", myCallback);
