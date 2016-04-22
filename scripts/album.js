@@ -1,3 +1,6 @@
+
+
+
 // ALBUM 01 
 var albumPicasso = {
      title: 'The Colors',
@@ -110,9 +113,27 @@ var setCurrentAlbum = function(album) {
  
      // #3
      albumSongList.innerHTML = '';
- 
      // #4
      for (var i = 0; i < album.songs.length; i++) {
          albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
      }
  };
+ 
+ var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
+
+ window.onload = function() {
+     setCurrentAlbum(albumJet);
+
+     songListContainer.addEventListener('mouseover', function(event) {
+         // #1
+         console.log(event.target);
+     });
+ }
+ // EXERCIS 2 - ADDING PLAYBUTTON
+  var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
+
+ // Album button templates
+ var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
+
+ window.onload = function() {
+
