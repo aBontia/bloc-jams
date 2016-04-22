@@ -129,11 +129,5 @@ var setCurrentAlbum = function(album) {
          console.log(event.target);
      });
  }
- // EXERCIS 2 - ADDING PLAYBUTTON
-  var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
 
- // Album button templates
- var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
-
- window.onload = function() {
-
+         
