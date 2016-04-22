@@ -1,6 +1,3 @@
-
-
-
 // ALBUM 01 
 var albumPicasso = {
      title: 'The Colors',
