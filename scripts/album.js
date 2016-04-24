@@ -136,8 +136,8 @@ var currentlyPlayingSong = null;
              this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
          });
                  songRows[i].addEventListener('click', function(event) {
-             // Event handler call  console.log('Hello Click');
-                  console.log("Line 140!")
+             // Event handler call 
+                 // console.log("Line 140!")
          });
                 
      }
@@ -162,7 +162,7 @@ var getSongItem = function(element) {
 };
 
 var clickHandler = function(targetElement) {
-        
+        var songItem = getSongItem(targetElement);
  };
 
 var findParentByClassName = function(element, targetClass) {
