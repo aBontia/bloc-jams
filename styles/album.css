@@ -38,12 +38,12 @@ thead {
      font-size: 0.75em;
  }
  .album-view-song-item {
-     height: 3rem;
+     height: 2.25rem;
      /* #1 */
      border-bottom: 1px solid rgba(255,255,255,0.5);
  }
  .song-item-number {
-     width: 7%;
+     width: 5%;
      text-align:center;
      min-width: 30px;    
  }
@@ -57,8 +57,8 @@ thead {
      width: 17%;
      text-align:center;
 }
-tr:nth-child(even) {
-  background-color:#8F6EA5;
+tbody:nth-child(odd) {
+  background:rgba(120, 79, 115, 0.51);
 }
  .album-song-button {
      text-align: center;
@@ -80,9 +80,6 @@ tr:nth-child(even) {
  .album-song-button span {
      line-height: 28px;
  }
-
-
-
 
  @media (max-width: 640px) and (min-width: 320px) {
      .album-view-details {
