@@ -158,14 +158,17 @@ var setCurrentAlbum = function(album) {
                         }
                         return currentParent;
                 }
+//======================Assignment Code-------------
                 if  (element) {
                         findParentByClassName === true;
-                        // alert("yes it is true");   
+                         alert("No parent found");   
                 }
                 else {
-                         alert('false');  
+                         alert('No parent found with that class name');  
                         }               
         };
+//======================Assignment Code-------------
+
 //-----------------------Added the Bubbling up for parent Class --------------------------
          // alert('code check');
 
