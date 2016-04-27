@@ -169,8 +169,9 @@ var setCurrentAlbum = function(album) {
         };
 //======================Assignment Code-------------
 
+
 //-----------------------Added the Bubbling up for parent Class --------------------------
-         // alert('code check');
+          alert('code check');
 
         var getSongItem = function(element) {
                 switch (element.className) {
