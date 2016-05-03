@@ -5,21 +5,19 @@
              opacity: 1,
              transform: 'scaleX(1) translateY(0)'
          });
-};
-         
-$.each($('.point'), revealPoint);
-         
-};
+            
+        };
+          
+ }  
 
-$(window).load(function() {
- 
+window.onload = function() {
      // #1
      if ($(window).height() > 950) {
          animatePoints();
      }
  
      // #2
-     var scrollDistance = $('.selling-points').offset().top - $(window).height() + 200;
+     var scrollDistance = $('.selling-points').offset().top - $(window).height() + 400;
 
      // #3
      $(window).scroll(function(event) {
@@ -28,8 +26,8 @@ $(window).load(function() {
              animatePoints();
          }
      });
- }
- });
+ } 
+
 
 
 
