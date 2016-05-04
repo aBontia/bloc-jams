@@ -5,9 +5,11 @@
              opacity: 1,
              transform: 'scaleX(1) translateY(0)'
          });
+            
         };   
- }  
-window.onload = function() {
+
+ 
+$(window).load(function() {
      // #1
      if ($(window).height() > 950) {
          animatePoints();
@@ -21,4 +23,5 @@ window.onload = function() {
              animatePoints();
          }
      });
+ });
  }
