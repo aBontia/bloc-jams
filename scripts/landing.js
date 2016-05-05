@@ -7,8 +7,7 @@
          });
             
         };   
-
- 
+         
 $(window).load(function() {
      // #1
      if ($(window).height() > 950) {
