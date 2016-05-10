@@ -44,13 +44,13 @@ var albumPicasso = {
                         { title: 'Hand O Job', duration: '3:15'},
                         { title: 'Clap Trap Keeper', duration: '2:45'}
                 ]
-        };
 
+        };
 
 
         var createSongRow = function(songNumber, songName, songLength) {
                 var template =
-                    '<tr class="album-view-song-item">'
+                  '<tr class="album-view-song-item">'
                 + '  <td class="song-item-number" data-song-number="' + songNumber + '">'
                 + songNumber + '</td>'
                 + '  <td class="song-item-title">' + songName + '</td>'
@@ -58,11 +58,11 @@ var albumPicasso = {
                 + '</tr>'
                 ;
                 console.log(template);
-                 //return template;
+                //return template;
                 return $(template);
-        };
 
- /*        var setCurrentAlbum = function(albums) {
+        };
+       var setCurrentAlbum = function(albums) {
                 var $albumTitle = $('.album-view-title');
                 var $albumArtist = $('.album-view-artist');
                 var $albumReleaseInfo = $('.album-view-release-info');
@@ -74,63 +74,68 @@ var albumPicasso = {
                 $albumReleaseInfo.text(album.year + ' ' + album.label);
                 $albumImage.attr('src', album.albumArtUrl);
 
-                albumSongList.innerHTML = '';
-                for (i = 0; 1 < albums.songs.length; i ++) {
-                        albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].name, album.songs[i].length);
+                //albumSongList.innerHTML = '';
+                $albumSongList.empty();
+
+                for (i = 0; 1 < album.songs.length; i ++) {
+                        var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
+                        $albumSongList.append($newRow);
                 }
         };
-*/
-console.log(window.onload);
 
-window.onload = function(albumPicasso) {
-        setCurrentAlbum();
-        var albums = [albumPicasso, albumMarconi, albumJet];
-        var index = 1;
-        albumImage.addEventListener("click", function(event) {
-                console.log('click is working');
-                setCurrentAlbum(albums[index]);
-                index++;
-                if (index == albums.length) {
-                        index = 0;
+        //console.log(window.onload);
+        window.onload = function(albumPicasso) {
+                setCurrentAlbum();
+                var albums = [albumPicasso, albumMarconi, albumJet];
+                var index = 1;
+                albumImage.addEventListener("click", function(event) {
+                        console.log('click is working');
+                        setCurrentAlbum(albums[index]);
+                        index++;
+                        if (index == albums.length) {
+                              index = 0;
+                        }
+                });
+        };
+
+        var setCurrentAlbum = function(album) {
+                // #1
+                var albumTitle = document.getElementsByClassName('album-view-title')[0];
+                var albumArtist = document.getElementsByClassName('album-view-artist')[0];
+                var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
+                var albumImage = document.getElementsByClassName('album-cover-art')[0];
+                var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
+
+                // #2
+                albumTitle.firstChild.nodeValue = album.title;
+                albumArtist.firstChild.nodeValue = album.artist;
+                albumReleaseInfo.firstChild.nodeValue = album.year + ' ' + album.label;
+                albumImage.setAttribute('src', album.albumArtUrl);
+
+                // #3
+                albumSongList.innerHTML = '';
+                // #4
+                for (var i = 0; i < album.songs.length; i++) {
+                        albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
                 }
-        });
-};
+        };
 
-var setCurrentAlbum = function(album) {
-     // #1
-     var albumTitle = document.getElementsByClassName('album-view-title')[0];
-     var albumArtist = document.getElementsByClassName('album-view-artist')[0];
-     var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
-     var albumImage = document.getElementsByClassName('album-cover-art')[0];
-     var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
-
-     // #2
-     albumTitle.firstChild.nodeValue = album.title;
-     albumArtist.firstChild.nodeValue = album.artist;
-     albumReleaseInfo.firstChild.nodeValue = album.year + ' ' + album.label;
-     albumImage.setAttribute('src', album.albumArtUrl);
-
-     // #3
-     albumSongList.innerHTML = '';
-     // #4
-     for (var i = 0; i < album.songs.length; i++) {
-         albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
-     }
- };
         var songListContainer = document.getElementsByClassName('album-view-song-list')[0];
         var songRows = document.getElementsByClassName('album-view-song-item');
         var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
         var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
-// Store state of playing songs
- var currentlyPlayingSong = null;
-
-
+        // Store state of playing songs
+        var currentlyPlayingSong = null;
 
         window.onload = function() {
                 setCurrentAlbum(albumPicasso);
                 songListContainer.addEventListener('mouseover', function(event) {
                         if (event.target.parentElement.className === 'album-view-song-item') {
-                                event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
+                                //event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
+                                var songItem = getSongItem(event.target);
+                                if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong) {
+                                        songItem.innerHTML = playButtonTemplate;
+                                }
                         }
                 });
 
@@ -143,12 +148,12 @@ var setCurrentAlbum = function(album) {
                                 if (songItemNumber !== currentlyPlayingSong) {
                                         songItem.innerHTML = songItemNumber;
                                 }
+
                         });
 
                         songRows[i].addEventListener('click', function(event) {
                                 clickHandler(event.target);
-                                //console.log('This works');
-                         });
+                        });
                 }
         }
 
@@ -162,7 +167,6 @@ var setCurrentAlbum = function(album) {
                         }
                         return currentParent;
                 }
-//======================Assignment Code-------------
                 if  (element) {
                         findParentByClassName === true;
                          alert("No parent found");
@@ -170,13 +174,10 @@ var setCurrentAlbum = function(album) {
                 else {
                          alert('No parent found with that class name');
                         }
+
         };
 //======================Assignment Code-------------
-
-
 //-----------------------Added the Bubbling up for parent Class --------------------------
-          alert('code check');
-
         var getSongItem = function(element) {
                 switch (element.className) {
                         case 'album-song-button':
@@ -210,4 +211,4 @@ var setCurrentAlbum = function(album) {
                         currentlyPlayingSong = songItem.getAttribute('data-song-number');
                 }
 
-         };
+        };
