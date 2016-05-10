@@ -1,3 +1,4 @@
+ // ALBUM 01
         var albumPicasso = {
                 name: 'The Colors',
                 artist: 'Pablo Picasso',
@@ -12,7 +13,7 @@
                         { name: 'Magenta', length: '2:15' }
                 ]
         };
-
+ // ALBUM 02
         var albumMarconi = {
                 name: 'The Telephone',
                 artist: 'Guglielmo Marconi',
@@ -27,6 +28,22 @@
                         { name: 'Wrong phone number', length: '2:15' }
                 ]
         };
+ // ALBUM 03
+        var albumJet = {
+                name: 'Juny Matumbo',
+                artist: 'Real Steel',
+                label: 'US Imports',
+                year: '2015',
+                albumArtUrl: 'assets/images/album_covers/21.png',
+                songs: [
+                        { name: 'Sick of it All', duration: '3:33' },
+                        { name: 'Nephra Titty', duration: '3:01' },
+                        { name: 'Box O Balls', duration: '4:21'},
+                        { name: 'Ball Swag Boogie', duration: '3:24' },
+                        { name: 'Hand O Job', duration: '3:15'},
+                        { name: 'Clap Trap Keeper', duration: '2:45'}
+                ]
+        };
 
         var createSongRow = function(songNumber, songName, songLength) {
                 var template =
@@ -37,7 +54,7 @@
                 + '</tr>'
                 ;
                 //console.log(template);
-                return template;
+                //return template;
                 return $(template);
         };
 
@@ -52,7 +69,6 @@
                 $albumArtist.text(album.artist);
                 $albumReleaseInfo.text(album.year + ' ' + album.label);
                 $albumImage.attr('src', album.albumArtUrl);
-
                 $albumSongList.empty();
 
                 for (i = 0; i < album.songs.length; i++) {
@@ -62,6 +78,7 @@
         };
 
         var findParentByClassName = function(element, targetClass) {
+
 
 //======================Assignment Code-------------
 
@@ -76,6 +93,7 @@
 
 //-----------------------Added the Bubbling up for parent Class --------------------------
      alert('code check');
+
         var getSongItem = function(element) {
                 switch (element.className) {
                         case 'album-song-button':
