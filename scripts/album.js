@@ -177,12 +177,12 @@
 //------Ch34-ASsn --------adding Seeker bar While song Plays-------
         var setCurrentTimeInPlayerBar = function(currentTime) {
                 var $currentTimeElement = $('.seek-control .current-time');
-                $currentTimeElement.text(currentTime); 
+                $currentTimeElement.text(currentTime);
         };
 
-        var setTotalTimeInPlayerBar = function(totalTime) { 
+        var setTotalTimeInPlayerBar = function(totalTime) {
                 var $totalTimeElement = $('.seek-control .total-time');
-                $totalTimeElement.text(totalTime); 
+                $totalTimeElement.text(totalTime);
         };
 
         var filterTimeCode = function(timeInSeconds) {
@@ -194,7 +194,7 @@
                 var output = minutes + ':';
 
                 if (remainingSeconds < 10) {
-                        output += '0';   
+                        output += '0';
                 }
 
                 output += remainingSeconds;
